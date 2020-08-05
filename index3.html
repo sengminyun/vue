@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+            width: 180px;
+            justify-content: space-between;
+        }
+
+        button{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 5% 5%;
+            line-height: 45px;
+            background: rgb(241, 241, 241);
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- <div id="app">
+        <p>{{message.value}}</p>
+        <p>{{message.value.length}}</p>
+        <p>{{list[2]}}</p>
+        <p>{{list[num]}}</p>
+    </div> -->
+
+    <div class="box">
+        <div id="app">
+            <!-- count 속성 출력하기 -->
+            <button v-on:click="increment">{{ count }}</button>
+    
+            <!-- 이 버튼을 클릭하면 increment 메서드가 호출됩니다. -->
+    
+        </div>
+        <div id="app2">
+            <!-- count 속성 출력하기 -->
+            <button v-on:click="increment">{{ count }}</button>
+    
+            <!-- 이 버튼을 클릭하면 increment 메서드가 호출됩니다. -->
+    
+        </div>
+        <div id="app3">
+            <!-- count 속성 출력하기 -->
+            <button v-on:click="increment">{{ count }}</button>
+    
+            <!-- 이 버튼을 클릭하면 increment 메서드가 호출됩니다. -->
+    
+        </div>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // new Vue({
+        //     el: '#app',
+        //     data: {
+        //         message: {
+        //             value: 'Hello Vue.js!'
+        //         },
+        //         list: ['사과', '바나나', '딸기'],
+        //         num:1
+        //     }
+        // })
+
+
+
+        new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            },
+            methods: {
+                // 버튼을 클릭할 때의 핸들러
+                increment: function (){
+                    this.count += 1 // 다시 할당하는 처리만 합니다.
+                }
+            }
+        })
+
+        new Vue({
+            el: '#app2',
+            data: {
+                count: 0
+            },
+            methods: {
+                // 버튼을 클릭할 때의 핸들러
+                increment: function (){
+                    this.count += 1 // 다시 할당하는 처리만 합니다.
+                }
+            }
+        })
+
+        new Vue({
+            el: '#app3',
+            data: {
+                count: 0
+            },
+            methods: {
+                // 버튼을 클릭할 때의 핸들러
+                increment: function (){
+                    this.count += 1 // 다시 할당하는 처리만 합니다.
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
